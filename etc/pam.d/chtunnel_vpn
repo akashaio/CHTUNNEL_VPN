@@ -1,0 +1,13 @@
+auth            sufficient      pam_mysql.so \
+user=chtunnel_vpn passwd=chtunnel_vpn host=localhost db=chtunnel_vpn \
+[table=user LEFT JOIN user_detail ON user_detail.user_id=user.user_id] usercolumn=user.user_id passwdcolumn=user.user_password \
+[where=user_detail.user_enable=1 AND user_detail.user_start_date!=user_detail.user_end_date \
+AND TO_DAYS(now()) >= TO_DAYS(user_detail.user_start_date) \
+AND (TO_DAYS(now()) <= TO_DAYS(user_detail.user_end_date) OR user_detail.user_end_date='0000-00-00')] sqllog=0 crypt=0
+ 
+account         required        pam_mysql.so \
+user=chtunnel_vpn passwd=chtunnel_vpn host=localhost db=chtunnel_vpn \
+[table=user LEFT JOIN user_detail ON user_detail.user_id=user.user_id] usercolumn=user.user_id passwdcolumn=user.user_password \
+[where=user_detail.user_enable=1 AND user_detail.user_start_date!=user_detail.user_end_date \
+AND TO_DAYS(now()) >= TO_DAYS(user_detail.user_start_date) \
+AND (TO_DAYS(now()) <= TO_DAYS(user_detail.user_end_date) OR user_detail.user_end_date='0000-00-00')] sqllog=0 crypt=0

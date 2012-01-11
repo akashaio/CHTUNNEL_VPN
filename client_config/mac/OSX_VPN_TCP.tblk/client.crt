@@ -1,0 +1,71 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 2 (0x2)
+        Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=TH, ST=BKK, L=Bankkok, O=Chtunnel, CN=Chtunnel CA/emailAddress=mr.tum_net@hotmail.com
+        Validity
+            Not Before: Mar 14 15:23:11 2011 GMT
+            Not After : Mar 11 15:23:11 2021 GMT
+        Subject: C=TH, ST=BKK, L=Bankkok, O=Chtunnel, CN=client/emailAddress=mr.tum_net@hotmail.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (1024 bit)
+                Modulus (1024 bit):
+                    00:c3:3e:80:3e:89:bf:f3:b0:d7:6b:9c:74:48:f1:
+                    76:d3:e5:c2:52:c1:2e:ae:27:3e:51:46:39:4b:2c:
+                    1f:95:23:29:ba:e1:80:ea:03:45:7b:6e:fe:f6:49:
+                    79:52:bd:d2:98:a8:97:62:78:de:0c:69:89:92:af:
+                    b9:8a:e4:60:0d:c1:84:fb:64:cb:85:11:32:cb:7e:
+                    6d:87:fb:1d:5d:44:7c:5b:e8:1f:b6:a3:07:cc:d7:
+                    96:43:bc:42:9b:e3:65:c1:94:55:5b:e0:f9:1b:1b:
+                    4c:68:62:b9:af:34:79:02:06:49:da:fb:04:48:20:
+                    4d:70:39:ed:74:5e:74:df:8b
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                Easy-RSA Generated Certificate
+            X509v3 Subject Key Identifier: 
+                62:CF:93:C1:18:25:6D:DE:B1:76:BE:E0:F2:87:C6:40:EA:9B:D1:F4
+            X509v3 Authority Key Identifier: 
+                keyid:0F:29:6D:B4:C5:1A:27:BA:8A:4A:29:C1:20:E3:4B:F8:22:85:5E:2D
+                DirName:/C=TH/ST=BKK/L=Bankkok/O=Chtunnel/CN=Chtunnel CA/emailAddress=mr.tum_net@hotmail.com
+                serial:D1:22:98:C8:64:66:1D:F7
+
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication
+            X509v3 Key Usage: 
+                Digital Signature
+    Signature Algorithm: sha1WithRSAEncryption
+        56:18:02:3f:dc:99:7c:0d:ed:23:63:16:b8:ea:07:d4:ab:ee:
+        6a:f5:c3:f7:13:2e:c9:eb:fd:d9:87:00:62:11:74:e0:e7:ec:
+        db:58:c1:16:ee:df:4e:b6:46:d3:48:c1:d2:f6:42:d5:c9:96:
+        5b:0b:af:6a:da:41:40:60:11:09:7e:76:e9:12:d2:91:52:7f:
+        27:cb:0d:40:f9:03:32:52:18:a9:d5:1f:f8:de:a0:f4:4f:c6:
+        0c:db:75:64:4a:f1:8c:36:7b:de:34:74:87:b3:42:ff:23:b4:
+        9c:e8:f9:ed:ba:b2:df:ad:51:91:6b:9f:09:5b:04:61:d5:1d:
+        5c:ff
+-----BEGIN CERTIFICATE-----
+MIIDnzCCAwigAwIBAgIBAjANBgkqhkiG9w0BAQUFADB9MQswCQYDVQQGEwJUSDEM
+MAoGA1UECBMDQktLMRAwDgYDVQQHEwdCYW5ra29rMREwDwYDVQQKEwhDaHR1bm5l
+bDEUMBIGA1UEAxMLQ2h0dW5uZWwgQ0ExJTAjBgkqhkiG9w0BCQEWFm1yLnR1bV9u
+ZXRAaG90bWFpbC5jb20wHhcNMTEwMzE0MTUyMzExWhcNMjEwMzExMTUyMzExWjB4
+MQswCQYDVQQGEwJUSDEMMAoGA1UECBMDQktLMRAwDgYDVQQHEwdCYW5ra29rMREw
+DwYDVQQKEwhDaHR1bm5lbDEPMA0GA1UEAxMGY2xpZW50MSUwIwYJKoZIhvcNAQkB
+FhZtci50dW1fbmV0QGhvdG1haWwuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCB
+iQKBgQDDPoA+ib/zsNdrnHRI8XbT5cJSwS6uJz5RRjlLLB+VIym64YDqA0V7bv72
+SXlSvdKYqJdieN4MaYmSr7mK5GANwYT7ZMuFETLLfm2H+x1dRHxb6B+2owfM15ZD
+vEKb42XBlFVb4PkbG0xoYrmvNHkCBkna+wRIIE1wOe10XnTfiwIDAQABo4IBMjCC
+AS4wCQYDVR0TBAIwADAtBglghkgBhvhCAQ0EIBYeRWFzeS1SU0EgR2VuZXJhdGVk
+IENlcnRpZmljYXRlMB0GA1UdDgQWBBRiz5PBGCVt3rF2vuDyh8ZA6pvR9DCBsAYD
+VR0jBIGoMIGlgBQPKW20xRonuopKKcEg40v4IoVeLaGBgaR/MH0xCzAJBgNVBAYT
+AlRIMQwwCgYDVQQIEwNCS0sxEDAOBgNVBAcTB0Jhbmtrb2sxETAPBgNVBAoTCENo
+dHVubmVsMRQwEgYDVQQDEwtDaHR1bm5lbCBDQTElMCMGCSqGSIb3DQEJARYWbXIu
+dHVtX25ldEBob3RtYWlsLmNvbYIJANEimMhkZh33MBMGA1UdJQQMMAoGCCsGAQUF
+BwMCMAsGA1UdDwQEAwIHgDANBgkqhkiG9w0BAQUFAAOBgQBWGAI/3Jl8De0jYxa4
+6gfUq+5q9cP3Ey7J6/3ZhwBiEXTg5+zbWMEW7t9OtkbTSMHS9kLVyZZbC69q2kFA
+YBEJfnbpEtKRUn8nyw1A+QMyUhip1R/43qD0T8YM23VkSvGMNnveNHSHs0L/I7Sc
+6PnturLfrVGRa58JWwRh1R1c/w==
+-----END CERTIFICATE-----

@@ -1,0 +1,55 @@
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# script for Chtunnel VPN.
+
+echo "1" > /proc/sys/net/ipv4/ip_dynaddr
+echo "1" > /proc/sys/net/ipv4/ip_forward
+
+#iptables -P FORWARD DROP
+iptables -A INPUT -i eth0 -p tcp -m tcp --dport 3306 -j ACCEPT
+
+iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE
+iptables -t nat -A POSTROUTING -s 10.10.0.0/24 -o eth0 -j MASQUERADE
+
+
+#Protect Syn Flood
+iptables -N syn-flood
+iptables -A syn-flood -i eth0 -m limit --limit 75/s --limit-burst 100 -j RETURN
+iptables -A syn-flood -j LOG --log-prefix "SYN-FLOOD: "
+iptables -A syn-flood -j DROP
+
+iptables -A INPUT -p ICMP -i eth0 --icmp-type 8 -j DROP
+
+iptables -A FORWARD -m string --algo bm --string "BitTorrent" -j DROP
+iptables -A FORWARD -m string --algo bm --string "BitTorrent protocol" -j DROP
+iptables -A FORWARD -m string --algo bm --string "peer_id=" -j DROP
+iptables -A FORWARD -m string --algo bm --string ".torrent" -j DROP
+iptables -A FORWARD -m string --algo bm --string "announce.php?passkey=" -j DROP
+iptables -A FORWARD -m string --algo bm --string "torrent" -j DROP
+iptables -A FORWARD -m string --algo bm --string "announce" -j DROP
+iptables -A FORWARD -m string --algo bm --string "info_hash" -j DROP
+iptables -A FORWARD -m string --algo bm --string "/default.ida?" -j DROP  #codered virus
+iptables -A FORWARD -m string --algo bm --string ".exe?/c+dir" -j DROP  #nimda virus
+iptables -A FORWARD -m string --algo bm --string ".exe?/c_tftp" -j DROP  #nimda virus
+
+iptables -A FORWARD -m string --string "peer_id" --algo kmp --to 65535 -j DROP
+iptables -A FORWARD -m string --string "BitTorrent" --algo kmp --to 65535 -j DROP
+iptables -A FORWARD -m string --string "BitTorrent protocol" --algo kmp --to 65535 -j DROP
+iptables -A FORWARD -m string --string "bittorrent-announce" --algo kmp --to 65535 -j DROP
+iptables -A FORWARD -m string --string "announce.php?passkey=" --algo kmp --to 65535 -j DROP
+
+iptables -A FORWARD -m string --string "info_hash" --algo kmp --to 65535 -j DROP
+iptables -A FORWARD -m string --string "get_peers" --algo kmp --to 65535 -j DROP
+iptables -A FORWARD -m string --string "announce" --algo kmp --to 65535 -j DROP
+iptables -A FORWARD -m string --string "announce_peers" --algo kmp --to 65535 -j DROP
+
+exit 0

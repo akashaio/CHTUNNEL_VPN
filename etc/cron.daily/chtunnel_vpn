@@ -1,0 +1,7 @@
+#!/bin/bash
+DB_USER="chtunnel_vpn"
+DB_PASSWD="chtunnel_vpn"
+DB_TABLE="chtunnel_vpn"
+#set user enable = 0 when today not time
+mysql -u$DB_USER -p$DB_PASSWD -e "UPDATE user_detail SET user_enable=1" $DB_TABLE
+mysql -u$DB_USER -p$DB_PASSWD -e "UPDATE user_detail SET user_enable=0 WHERE ((user_detail.user_start_date = user_detail.user_end_date) or ((TO_DAYS(now()) < TO_DAYS(user_detail.user_start_date)) or (TO_DAYS(now()) > TO_DAYS(user_detail.user_end_date))))" $DB_TABLE
