@@ -1,6 +1,7 @@
 ﻿ CHTUNNEL VPN 2.0 (2012)
- OpenVPN Based On User/Password Authentication and days Control 
 ============================================================================
+ OpenVPN Based On User/Password Authentication and days Control 
+----------------------------------------------------------------------------
 
 + System detail
   - OpenVPN System Based
