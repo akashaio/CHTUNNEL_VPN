@@ -1,0 +1,11 @@
+﻿CHTUNNVL-VPN 2.0
+Date : 01-01-2012
+===================================
+ติดตั้ง Chtunnel-Config เสร็จสมบูรณ์
+===================================
+Website	: http://www.chtunnel.com/
+E-mail	: support@chtunnel.com
+Msn 	: mr.tum_net@hotmail.com
+Phone	: 08-1544-7514
+===================================
+install successful.
