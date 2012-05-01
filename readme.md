@@ -7,7 +7,7 @@
   - OpenVPN System Based
   - OS Linux (ubuntu server)
   - Pam_mysql module
-  - Saslauthd (ssasl2-bin)
+  - Saslauthd  (sasl2-bin)
   - Database MySQL
   - Limit and control days
   - User/Password Authentication
